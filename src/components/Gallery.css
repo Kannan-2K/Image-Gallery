@@ -1,0 +1,96 @@
+/* Gallery Component Layout & Grid */
+.gallery__status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding: 0 0.25rem;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.gallery__count strong {
+  color: #0f172a;
+}
+
+.gallery__count em {
+  font-style: normal;
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+/* Responsive CSS Grid Container */
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.75rem;
+  width: 100%;
+}
+
+/* Empty State */
+.gallery__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1.5rem;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 2px dashed #cbd5e1;
+  margin: 2rem 0;
+}
+
+.gallery__empty-icon {
+  width: 56px;
+  height: 56px;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.gallery__empty-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.5rem 0;
+}
+
+.gallery__empty-text {
+  font-size: 0.95rem;
+  color: #64748b;
+  max-width: 440px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 640px) {
+  .gallery__grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .gallery__status-bar {
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .gallery__empty {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .gallery__grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .gallery__grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+}
+
